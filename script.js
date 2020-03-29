@@ -33,5 +33,16 @@ question();
 
 let budgetMonth = money - amount1 - amount2;
 console.log('budgetMonth: ', budgetMonth);
-let budgetDay = Math.round(budgetMonth / 30);
+console.log("Цель будет достигнута через " + Math.round(mission / budgetMonth) + " месяцев.");
+let budgetDay = Math.floor(budgetMonth / 30);
 console.log('budgetDay: ', budgetDay);
+
+if (budgetDay >= 1200) {
+    console.log("У вас высокий уровень дохода");
+} else if (budgetDay >= 600 && budgetDay < 1200){
+    console.log("У вас средний уровень дохода");
+} else if (budgetDay < 600 && budgetDay > 0) {
+    console.log("К сожалению у вас уровень дохода ниже среднего");
+} else if (budgetDay <= 0) {
+    console.log("Что то пошло не так");
+}
